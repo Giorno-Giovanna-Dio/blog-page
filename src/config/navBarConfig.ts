@@ -15,6 +15,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 	];
 
 	// 支持自定义导航栏链接,并且支持多级菜单
+	/*
 	links.push({
 		name: "链接",
 		url: "/links/",
@@ -34,16 +35,20 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			},
 		],
 	});
+	*/
 
-	links.push(LinkPreset.Friends);
+	//links.push(LinkPreset.Friends);
 
 	// 根据配置决定是否添加留言板页面
+	/*
 	if (siteConfig.pages.guestbook) {
 		links.push(LinkPreset.Guestbook);
 	}
-
+	*/
+	links.push(LinkPreset.About)
+	/*
 	links.push({
-		name: "关于",
+		name: "About",
 		url: "/content/",
 		icon: "material-symbols:info",
 		children: [
@@ -52,6 +57,7 @@ const getDynamicNavBarConfig = (): NavBarConfig => {
 			...(siteConfig.pages.bangumi ? [LinkPreset.Bangumi] : []), // 根据配置决定是否添加番组计划页面
 		],
 	});
+	*/
 	// 仅返回链接，其它导航搜索相关配置在模块顶层常量中独立导出
 	return { links } as NavBarConfig;
 };

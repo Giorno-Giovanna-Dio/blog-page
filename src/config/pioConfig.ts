@@ -55,7 +55,7 @@ export const spineModelConfig: SpineModelConfig = {
 
 // Live2D 看板娘配置
 export const live2dModelConfig: Live2DModelConfig = {
-	enable: false, // 启用 Live2D 看板娘
+	enable: true, // 启用 Live2D 看板娘
 	model: {
 		// Live2D模型文件路径
 		path: "/pio/models/live2d/snow_miku/model.json",
@@ -75,13 +75,21 @@ export const live2dModelConfig: Live2DModelConfig = {
 		enabled: true, // 启用交互功能
 		// motions 和 expressions 将从模型 JSON 文件中自动读取
 		clickMessages: [
-			"你好！我是Miku~",
-			"有什么需要帮助的吗？",
-			"今天天气真不错呢！",
-			"要不要一起玩游戏？",
-			"记得按时休息哦！",
+			"You can do this!",
+			"Today's gonna be a great day!",
+			"It's only worth it if you work for it!",
+			"Even when you feel low you can still go!",
+			"Even when you feel slow you can still go!",
+			"Even when there's no hope you can still go!",
+			"Wake up early, gon' rise with the sun!",
+			"Get some good, some food in you!",
+			"Think real hard bout what you wanna be!",
+			"Fuck everybody, just do your thing!!",
+			"Good food, good mood, blood in circulation!",
+			"One step at a time, yeah, that's how you make it!",
+
 		], // 点击时随机显示的文字消息
-		messageDisplayTime: 3000, // 文字显示时间（毫秒）
+		messageDisplayTime: 4000, // 文字显示时间（毫秒）
 	},
 	responsive: {
 		hideOnMobile: true, // 在移动端隐藏

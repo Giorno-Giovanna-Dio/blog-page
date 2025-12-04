@@ -3,22 +3,16 @@ import { fontConfig } from "./fontConfig";
 
 // 定义站点语言
 // 语言代码，例如：'zh_CN', 'zh_TW', 'en', 'ja', 'ru'。
-const SITE_LANG = "zh_CN";
+const SITE_LANG = "en";
 
 export const siteConfig: SiteConfig = {
-	title: "Firefly",
+	title: "DavidChung",
 	subtitle: "Demo site",
-	site_url: "https://firefly.cuteleaf.cn",
+	site_url: "http://localhost:4321",
 	description:
-		"Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+		"David.C Blog Post is a place where I share my thoughts about ideas that I am interested in.",
 	keywords: [
-		"Firefly",
-		"Fuwari",
-		"Astro",
-		"ACGN",
-		"博客",
-		"技术博客",
-		"静态博客",
+		"Daivd Chung"
 	],
 
 	lang: SITE_LANG,
@@ -48,15 +42,15 @@ export const siteConfig: SiteConfig = {
 		value: "/assets/images/LiuYingPure3.svg",
 		alt: "🍀",
 	},
-	navbarTitle: "Firefly", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
+	navbarTitle: "David Chung", // 导航栏标题，可以设置为与 title 不同的值，如果不设置则使用 title
 	navbarWidthFull: false, // 全宽导航栏，导航栏是否占满屏幕宽度，true：占满，false：不占满
 
 	// 站点开始日期，用于统计运行天数
-	siteStartDate: "2025-01-01", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
+	siteStartDate: "2025-12-04", // 请修改为你的站点实际开始日期，格式：YYYY-MM-DD
 
 	// bangumi配置
 	bangumi: {
-		userId: "1163581", // 在此处设置你的Bangumi用户ID
+		userId: "", // 在此处设置你的Bangumi用户ID
 	},
 
 	// 文章页底部的"上次编辑时间"卡片开关
@@ -68,9 +62,9 @@ export const siteConfig: SiteConfig = {
 	// 页面开关配置 - 控制特定页面的访问权限，设为false会返回404
 	// bangumi的数据为编译时获取的，所以不是实时数据，请配置bangumi.userId
 	pages: {
-		sponsor: true, // 赞助页面开关
+		sponsor: false, // 赞助页面开关
 		guestbook: true, // 留言板页面开关，需要配置评论系统
-		bangumi: true, // 番组计划页面开关，含追番和游戏，dev调试时只获取一页数据，build才会获取全部数据
+		bangumi: false, // 番组计划页面开关，含追番和游戏，dev调试时只获取一页数据，build才会获取全部数据
 	},
 
 	// 文章列表布局配置
@@ -97,9 +91,9 @@ export const siteConfig: SiteConfig = {
 		// 背景图片配置
 		src: {
 			// 桌面背景图片
-			desktop: "/assets/images/d1.webp",
+			desktop: "/assets/images/eren_wallpaper.png",
 			// 移动背景图片
-			mobile: "/assets/images/m3.webp",
+			mobile: "/assets/images/eren_wallpaper_phone",
 		},
 
 		// Banner模式特有配置
@@ -113,29 +107,38 @@ export const siteConfig: SiteConfig = {
 				// 主页显示自定义文本（全局开关）
 				enable: true,
 				// 主页横幅主标题
-				title: "Lovely firefly!",
+				title: "David Chung!",
 				// 主页横幅副标题
 				subtitle: [
-					"In Reddened Chrysalis, I Once Rest",
-					"From Shattered Sky, I Free Fall",
-					"Amidst Silenced Stars, I Deep Sleep",
-					"Upon Lighted Fyrefly, I Soon Gaze",
-					"From Undreamt Night, I Thence Shine",
-					"In Finalized Morrow, I Full Bloom",
+					"Through Present Duty, My Character Is Forged",
+					"In Steady Resolve, I Carry What Is Mine to Bear",
+					"From Discipline Daily, My Freedom Is Born",
+					"Within Chosen Burdens, My Strength Takes Root",
+					"By Quiet Courage, I Walk the Path Unshaken",
+					"Through Honest Effort, My Future Holds Its Form",
+					"In Mastering Myself, I Find All I Need",
+					"Amid Harsh Winds, My Principles Stand Fast",
+					"From Each Hard Lesson, My Wisdom Grows Steady",
+					"By Living Upright, I Become My Own Anchor",
+					"Within Quiet Pages, My Thoughts Awaken",
+					"From Weighted Struggles, My Strength Emerges",
+					"Through Unsolved Puzzles, My Mind Finds Clarity",
+					"In Crafted Creations, My Vision Takes Form",
+					"Beyond Each Challenge, My Future Unfolds",
 				],
 				typewriter: {
 					//打字机开启 → 循环显示所有副标题
 					//打字机关闭 → 每次刷新随机显示一条副标题
 					enable: false, // 启用副标题打字机效果
-					speed: 100, // 打字速度（毫秒）
+					speed: 50, // 打字速度（毫秒）
 					deleteSpeed: 50, // 删除速度（毫秒）
 					pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
 				},
 			},
 			credit: {
 				enable: {
-					desktop: true, // 桌面端显示横幅图片来源文本
-					mobile: true, // 移动端显示横幅图片来源文本
+					desktop: false, // 桌面端显示横幅图片来源文本
+					mobile: false, // 移动端显示横幅图片来源文本
 				},
 				text: {
 					desktop: "Pixiv - 晚晚喵", // 桌面端要显示的来源文本
@@ -147,7 +150,7 @@ export const siteConfig: SiteConfig = {
 				},
 			},
 			navbar: {
-				transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
+				transparentMode: "semi", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
 			},
 			// 波浪动画效果配置，开启可能会影响页面性能，请根据实际情况开启
 			waves: {
